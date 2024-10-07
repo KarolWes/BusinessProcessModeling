@@ -1,0 +1,68 @@
+{
+  "components": [
+    {
+      "label": "Numer albumu",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0n7lvsa",
+        "columns": null
+      },
+      "id": "Field_01h40ud",
+      "key": "podanie_nrAlbumu",
+      "readonly": true
+    },
+    {
+      "label": "Punkty ECTS",
+      "type": "number",
+      "layout": {
+        "row": "Row_0sbew2i",
+        "columns": null
+      },
+      "id": "Field_15y3g05",
+      "key": "podanie_punktyECTS",
+      "readonly": true
+    },
+    {
+      "label": "Uzasadnienie",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_077ci19",
+        "columns": null
+      },
+      "id": "Field_0300m1c",
+      "key": "podanie_uzasadnienie",
+      "readonly": true
+    },
+    {
+      "label": "Czy pozytywna",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1xlgr7s",
+        "columns": null
+      },
+      "id": "Field_0ba4pnr",
+      "key": "decyzja_czyPozytywna",
+      "readonly": true
+    },
+    {
+      "label": "Uzasadnienie decyzji",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_10pcid0",
+        "columns": null
+      },
+      "id": "Field_0n4yi37",
+      "key": "decyzja_uzasadnienie",
+      "readonly": true
+    }
+  ],
+  "type": "default",
+  "id": "odebranie_decyzji_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.27.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.21.0",
+  "schemaVersion": 16
+}
