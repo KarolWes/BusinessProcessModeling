@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="OcenaPodaniaDMN" name="OcenaPodania" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.27.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.21.0">
+  <decision id="OcenaPodania" name="OcenaPodania" camunda:historyTimeToLive="30">
+    <decisionTable id="DecisionTable_0c042gc">
+      <input id="Input_1" label="Punkty ECTS">
+        <inputExpression id="InputExpression_1" typeRef="integer">
+          <text>podanie_punktyECTS</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_02w5b5d" label="Uzasadnienie Podania">
+        <inputExpression id="LiteralExpression_15g15s6" typeRef="integer" expressionLanguage="feel">
+          <text>string length(podanie_uzasadnienie)</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Czy pozytywna?" name="decyzja_czyPozytywna" typeRef="boolean" biodi:width="192" />
+      <output id="OutputClause_1dw9rlj" label="Uzasadnienie decyzji" name="decyzja_uzasadnienie" typeRef="string" />
+      <output id="OutputClause_0o313no" label="Czy podjęto decyzję?" name="czyJestDecyzja" typeRef="boolean" />
+      <rule id="DecisionRule_12zlwuv">
+        <inputEntry id="UnaryTests_0oa8nwl">
+          <text>&gt;= 18</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pvsx5h">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02db6hd">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o6ky7p">
+          <text>"Wystarczająco dużo punktów ECTS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c1w37h">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0nqmfvg">
+        <inputEntry id="UnaryTests_18p3t4a">
+          <text>&lt; 15</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1okx8q1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1h44yuc">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wdc1vx">
+          <text>"Za mało punktów ECTS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o0odfz">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1822jeg">
+        <inputEntry id="UnaryTests_16t0oij">
+          <text>[15..18[</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0201hgd">
+          <text>&gt;= 10</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0iqisgo">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0puj69i">
+          <text>"Mało punktów ECTS, ale dobre uzasadnienie"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_158l9sj">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0vauktt">
+        <inputEntry id="UnaryTests_0gzquv4">
+          <text>[15..18[</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ka2san">
+          <text>&lt;10</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1a0wu0c">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lftqpw">
+          <text>"Za słabe uzasadnienie, brak decyzji"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07edfo8">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="OcenaPodania">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

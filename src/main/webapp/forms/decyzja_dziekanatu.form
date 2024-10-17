@@ -1,0 +1,66 @@
+{
+  "components": [
+    {
+      "label": "Numer albumu",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_183v7b4",
+        "columns": null
+      },
+      "id": "Field_0f08t6l",
+      "key": "podanie_nrAlbumu",
+      "readonly": true
+    },
+    {
+      "label": "Punkty ECTS",
+      "type": "number",
+      "layout": {
+        "row": "Row_146tq8i",
+        "columns": null
+      },
+      "id": "Field_1ai595k",
+      "key": "podanie_punktyECTS",
+      "readonly": true
+    },
+    {
+      "label": "Uzasadnienie",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1h7hq5b",
+        "columns": null
+      },
+      "id": "Field_0rlmxa3",
+      "key": "podanie_uzasadnienie",
+      "readonly": true
+    },
+    {
+      "label": "Czy pozytywna?",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_06zdxzr",
+        "columns": null
+      },
+      "id": "Field_1m31mii",
+      "key": "decyzja_czyPozytywna"
+    },
+    {
+      "label": "Uzasadnienie",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0ifx6di",
+        "columns": null
+      },
+      "id": "Field_10e1faa",
+      "key": "decyzja_uzasadnienie"
+    }
+  ],
+  "type": "default",
+  "id": "decyzja_dziekanatu",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.27.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.21.0",
+  "schemaVersion": 16
+}
