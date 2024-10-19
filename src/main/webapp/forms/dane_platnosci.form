@@ -1,0 +1,53 @@
+{
+  "components": [
+    {
+      "label": "nr Konta",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0ejo2yr",
+        "columns": null
+      },
+      "id": "Field_0zbg9q9",
+      "key": "oplata_nrKonta"
+    },
+    {
+      "label": "kwota",
+      "type": "number",
+      "layout": {
+        "row": "Row_1ma0d1o",
+        "columns": null
+      },
+      "id": "Field_1bdkgjl",
+      "key": "oplata_kwota"
+    },
+    {
+      "label": "czy zgoda?",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0dfhqqz",
+        "columns": null
+      },
+      "id": "Field_17n5gxv",
+      "key": "oplata_czyZgoda"
+    },
+    {
+      "label": "status płatnosci",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1dqigc2",
+        "columns": null
+      },
+      "id": "Field_1lhqnbw",
+      "key": "oplata_status"
+    }
+  ],
+  "type": "default",
+  "id": "dane_platnosci",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.27.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.21.0",
+  "schemaVersion": 16
+}
