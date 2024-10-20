@@ -54,6 +54,26 @@
       "id": "Field_0n4yi37",
       "key": "decyzja_uzasadnienie",
       "readonly": true
+    },
+    {
+      "label": "Status płaności",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0yfb57b",
+        "columns": null
+      },
+      "id": "Field_04dbxnj",
+      "key": "oplata_status"
+    },
+    {
+      "label": "Czy odwołanie",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_138xeim",
+        "columns": null
+      },
+      "id": "Field_1c3o01u",
+      "key": "czyOdwolanie"
     }
   ],
   "type": "default",
